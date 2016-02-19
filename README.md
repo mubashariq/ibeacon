@@ -1,2 +1,2 @@
 # ibeacon
-iBeacon - Navigation app
+iBeacon - Navigation app for blind people
