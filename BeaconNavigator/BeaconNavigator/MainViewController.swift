@@ -20,10 +20,10 @@ class MainViewController: UIViewController {
         exitButton.layer.borderColor = UIColor.blackColor().CGColor;
     }
 
-    override func didReceiveMemoryWarning() {
+    /*override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
+    }*/
     
     @IBAction func exitButtonAction(sender: AnyObject) {
         
