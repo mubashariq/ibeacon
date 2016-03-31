@@ -2,8 +2,8 @@
 //  BeaconNavigatorTests.swift
 //  BeaconNavigatorTests
 //
-//  Created by Mubashar Iqbal on 13/03/2016.
-//  Copyright © 2016 Mubashar Iqbal. All rights reserved.
+//  Created by mubashir on 13/03/2016.
+//  Copyright © 2016 mubashir. All rights reserved.
 //
 
 import XCTest
