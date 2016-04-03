@@ -39,7 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func playAudio()
     {
-        let coinSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("beep-06", ofType: "wav")!)
+        let coinSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("beep-06", ofType: "wav")!) // TODO: need to change with voice messages
         let playerItem = AVPlayerItem(URL: coinSound)
         player = AVPlayer(playerItem:playerItem)
         player.rate = 1.0;
