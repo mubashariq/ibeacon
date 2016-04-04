@@ -1,4 +1,5 @@
 
+
 import UIKit
 
 class MainViewController: UIViewController {
@@ -18,6 +19,18 @@ class MainViewController: UIViewController {
         exitButton.layer.cornerRadius = 1
         exitButton.layer.borderWidth = 1
         exitButton.layer.borderColor = UIColor.blackColor().CGColor;
+        
+        startNavButton.layer.cornerRadius = 1
+        startNavButton.layer.borderWidth = 1
+        startNavButton.layer.borderColor = UIColor.blackColor().CGColor;
+        
+        bookmarkButton.layer.cornerRadius = 5
+        bookmarkButton.layer.borderWidth = 1
+        bookmarkButton.layer.borderColor = UIColor.blackColor().CGColor;
+        
+        searchLocationButton.layer.cornerRadius = 5
+        searchLocationButton.layer.borderWidth = 1
+        searchLocationButton.layer.borderColor = UIColor.blackColor().CGColor;
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,6 +41,12 @@ class MainViewController: UIViewController {
     @IBAction func exitButtonAction(sender: AnyObject) {
         
         self .dismissViewControllerAnimated(true, completion:nil)
+    }
+    
+    @IBAction func searchButtonAction(sender: AnyObject) {
+        
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        appDelegate.playAudio()
     }
     
     @IBAction func navigateButtonAction(sender: AnyObject) {
@@ -41,5 +60,16 @@ class MainViewController: UIViewController {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         appDelegate.playAudio()
     }
+    
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
 
 }

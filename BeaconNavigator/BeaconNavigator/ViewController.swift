@@ -6,9 +6,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var exitButton: UIButton!
     
+    let imvc = ItemsViewController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         addBorderToButton()
+        
+        imvc.configureBeacon();
         // Do any additional setup after loading the view, typically from a nib.
     }
 

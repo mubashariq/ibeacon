@@ -2,24 +2,37 @@ import UIKit
 import CoreLocation
 
 class ItemCell: UITableViewCell {
-  @IBOutlet weak var valueTextView: UITextView!
-  
-  var item: Item? {
+    @IBOutlet weak var valueTextView: UITextView!
     
-    didSet {
-        item?.addObserver(self, forKeyPath: "lastSeenBeacon", options: .New, context: nil)
-      textLabel!.text = item?.name
-    }
-    
-    willSet {
-        if let thisItem = item {
-            thisItem.removeObserver(self, forKeyPath: "lastSeenBeacon")
+    var item: Item? = nil {
+        willSet {
+            if let thisItem = item {
+                thisItem.removeObserver(self, forKeyPath: "lastSeenBeacon")
+            }
+        }
+        didSet {
+            item?.addObserver(self, forKeyPath: "lastSeenBeacon", options: .New, context: nil)
+            
+            textLabel!.text = item?.name
         }
     }
     
+    deinit {
+        item?.removeObserver(self, forKeyPath: "lastSeenBeacon")
+    }
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
     
-  }
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        item = nil
+    }
+    
+    override func setSelected(selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+    }
     
     func nameForProximity(proximity: CLProximity) -> String {
         switch proximity {
@@ -34,29 +47,13 @@ class ItemCell: UITableViewCell {
         }
     }
     
-/*func observeValueForKeyPath(keyPath: String, ofObject object: AnyObject, change: [NSObject : AnyObject], context: UnsafeMutablePointer<Void>) {
-        if let anItem = object as? Item where anItem == item && keyPath == "lastSeenBeacon" {
-            let proximity = nameForProximity(anItem.lastSeenBeacon!.proximity)
-            let accuracy = String(format: "%.2f", anItem.lastSeenBeacon!.accuracy)
-            detailTextLabel!.text = "Location: \(proximity) (approx. \(accuracy)m)"
+    override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
+        if let anItem = object as? Item {
+            if anItem == item && keyPath == "lastSeenBeacon" {
+                let proximity = nameForProximity(anItem.lastSeenBeacon!.proximity)
+                let accuracy = NSString(format: "%.2f", anItem.lastSeenBeacon!.accuracy)
+                detailTextLabel!.text = "Location: \(proximity) (approx. \(accuracy)m)"
+            }
         }
-    }*/
-    
-    
-  override func awakeFromNib() {
-    super.awakeFromNib()
-  }
-  
-    deinit {
-        item?.removeObserver(self, forKeyPath: "lastSeenBeacon")
     }
-    
-  override func prepareForReuse() {
-    super.prepareForReuse()
-    
-  }
-  override func setSelected(selected: Bool, animated: Bool) {
-    super.setSelected(selected, animated: animated)
-  }
-  
 }

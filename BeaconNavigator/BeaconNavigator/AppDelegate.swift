@@ -1,6 +1,7 @@
 
 import UIKit
 import AVFoundation
+import CoreLocation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -8,8 +9,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     //var audioPlayer:AVAudioPlayer
     var player = AVPlayer()
+    
+    let locationManager = CLLocationManager()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        locationManager.requestAlwaysAuthorization()
+        locationManager.delegate = self
         // Override point for customization after application launch.
         //audioPlayer =  AVAudioPlayer()
         return true
@@ -39,14 +44,45 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func playAudio()
     {
-        let coinSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("beep-06", ofType: "wav")!) // TODO: need to change with voice messages
+        let coinSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("beep-06", ofType: "wav")!)
         let playerItem = AVPlayerItem(URL: coinSound)
         player = AVPlayer(playerItem:playerItem)
         player.rate = 1.0;
         player.play()
         
     }
+    
+    func beaconDetected(i: Item)
+    {
+    NSNotificationCenter.defaultCenter().postNotificationName("NotificationIdentifier", object: i)
+    }
 
 
 }
+
+
+extension AppDelegate: CLLocationManagerDelegate {
+    public func locationManager(manager: CLLocationManager, monitoringDidFailForRegion region: CLRegion?, withError error: NSError) {
+        print("Failed monitoring region: \(error.description)")
+    }
+    
+    public func locationManager(manager: CLLocationManager, didFailWithError error: NSError){
+        print("Location manager failed: \(error.description)")
+    }
+    
+    public func locationManager(manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], inRegion region: CLBeaconRegion) {
+       // if let beacons = beacons as? [CLBeacon] {
+         //   for beacon in beacons {
+                /*for item in items {
+                    if item == beacon {
+                        item.lastSeenBeacon = beacon
+                        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+                        appDelegate.beaconDetected(item)
+                    }
+                }*/
+           // }
+        //}
+    }
+}
+
 
