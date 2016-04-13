@@ -1,10 +1,11 @@
-//incomplete
 import UIKit
 
 class FloorViewController: UIViewController {
 
     @IBOutlet weak var firstFloorButton: UIButton!
     @IBOutlet weak var secondFloorButton: UIButton!
+    @IBOutlet weak var thirdFloorButton: UIButton!
+    @IBOutlet weak var fourthFloorButton: UIButton!
     
     
     override func viewDidLoad() {
@@ -25,22 +26,29 @@ class FloorViewController: UIViewController {
         {
             firstFloorButton.backgroundColor = UIColor.redColor()
             secondFloorButton.backgroundColor = UIColor.clearColor()
-
+            thirdFloorButton.backgroundColor = UIColor.clearColor()
+            fourthFloorButton.backgroundColor = UIColor.clearColor()
         }
         else if(item.majorValue==2)
         {
             firstFloorButton.backgroundColor = UIColor.clearColor();
             secondFloorButton.backgroundColor = UIColor.redColor()
+            thirdFloorButton.backgroundColor = UIColor.clearColor()
+            fourthFloorButton.backgroundColor = UIColor.clearColor()
         }
         else if(item.majorValue==3)
         {
             firstFloorButton.backgroundColor = UIColor.clearColor();
             secondFloorButton.backgroundColor = UIColor.clearColor()
+            thirdFloorButton.backgroundColor = UIColor.redColor()
+            fourthFloorButton.backgroundColor = UIColor.clearColor()
         }
         else if(item.majorValue==4)
         {
             firstFloorButton.backgroundColor = UIColor.clearColor();
             secondFloorButton.backgroundColor = UIColor.clearColor()
+            thirdFloorButton.backgroundColor = UIColor.clearColor()
+            fourthFloorButton.backgroundColor = UIColor.redColor()
         }
     }
     
