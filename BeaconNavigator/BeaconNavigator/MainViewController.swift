@@ -24,13 +24,14 @@ class MainViewController: UIViewController {
         startNavButton.layer.borderWidth = 1
         startNavButton.layer.borderColor = UIColor.blackColor().CGColor;
         
-        bookmarkButton.layer.cornerRadius = 5
+      /*  bookmarkButton.layer.cornerRadius = 5
         bookmarkButton.layer.borderWidth = 1
         bookmarkButton.layer.borderColor = UIColor.blackColor().CGColor;
         
         searchLocationButton.layer.cornerRadius = 5
         searchLocationButton.layer.borderWidth = 1
         searchLocationButton.layer.borderColor = UIColor.blackColor().CGColor;
+ */
     }
 
     override func didReceiveMemoryWarning() {

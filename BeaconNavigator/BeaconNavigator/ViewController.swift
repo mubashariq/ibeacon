@@ -26,10 +26,11 @@ class ViewController: UIViewController {
         exitButton.layer.cornerRadius = 1
         exitButton.layer.borderWidth = 1
         exitButton.layer.borderColor = UIColor.blackColor().CGColor;
-        
+       /*
         startButton.layer.cornerRadius = 1
         startButton.layer.borderWidth = 1
         startButton.layer.borderColor = UIColor.blackColor().CGColor;
+ */
     }
     
     @IBAction func startButtonAction(sender: AnyObject) {
