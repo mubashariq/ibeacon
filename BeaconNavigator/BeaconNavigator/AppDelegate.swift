@@ -9,6 +9,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     //var audioPlayer:AVAudioPlayer
     var player = AVPlayer()
+    var CurrentBeacon : NSString = ""
     
     let locationManager = CLLocationManager()
 
@@ -54,10 +55,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func beaconDetected(i: Item)
     {
+        
+        
+         if(i.majorValue==1)
+         {
+         CurrentBeacon = "1"
+         }
+         else if(i.majorValue==2)
+         {
+         CurrentBeacon = "2"
+         }
+         else if(i.majorValue==3)
+         {
+         CurrentBeacon = "3"
+         }
+         else if(i.majorValue==4)
+         {
+         CurrentBeacon = "4"
+         
+        
+    //CurrentBeacon = i.majorValue as String
     NSNotificationCenter.defaultCenter().postNotificationName("NotificationIdentifier", object: i)
     }
 
 
+}
 }
 
 

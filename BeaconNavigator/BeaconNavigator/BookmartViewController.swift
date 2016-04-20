@@ -8,14 +8,35 @@
 
 import UIKit
 
-class BookmartViewController: UIViewController {
+class BookmartViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    
+    @IBOutlet weak var tableView: UITableView!
+    var items: [String] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        populateFloorData()
         // Do any additional setup after loading the view.
     }
 
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        performSegueWithIdentifier("abcd", sender: self)
+        /*
+        let secondViewController = self.storyboard!.instantiateViewControllerWithIdentifier("YourViewController") as! BookMarkDetailsViewController
+        
+        self.navigationController!.pushViewController(secondViewController, animated: true)
+        */
+    }
+ 
+    func populateFloorData()
+    {
+            items = ["First Floor", "Nearest Room is 101", "You are standing near entrance", "Your nearest location in helping desk","Elevator is 100 meter away straight","On your left is head office","Library on third floor"]
+        tableView.reloadData()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -26,6 +47,20 @@ class BookmartViewController: UIViewController {
         self .dismissViewControllerAnimated(true, completion:nil)
     }
 
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.items.count;
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell")! as UITableViewCell
+        
+        cell.backgroundColor = tableView.backgroundColor
+        cell.textLabel?.textColor = UIColor.whiteColor()
+        cell.textLabel?.text = self.items[indexPath.row]
+        
+        return cell
+    }
+    
     /*
     // MARK: - Navigation
 
