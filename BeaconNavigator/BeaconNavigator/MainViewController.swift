@@ -40,26 +40,27 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func exitButtonAction(sender: AnyObject) {
-        
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        appDelegate.playAudio("beep-06")
         self .dismissViewControllerAnimated(true, completion:nil)
     }
     
     @IBAction func searchButtonAction(sender: AnyObject) {
         
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        appDelegate.playAudio()
+        appDelegate.playAudio("beep-06")
     }
     
     @IBAction func navigateButtonAction(sender: AnyObject) {
         
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        appDelegate.playAudio()
+        appDelegate.playAudio("beep-06")
     }
     
     @IBAction func bookmarkButtonAction(sender: AnyObject) {
         
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        appDelegate.playAudio()
+        appDelegate.playAudio("beep-06")
     }
     
 

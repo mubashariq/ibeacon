@@ -43,9 +43,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
     
-    func playAudio()
+    func playAudio(beep: String)
     {
-        let coinSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("beep-06", ofType: "wav")!)
+        let coinSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource(beep, ofType: "wav")!)
         let playerItem = AVPlayerItem(URL: coinSound)
         player = AVPlayer(playerItem:playerItem)
         player.rate = 1.0;

@@ -10,8 +10,13 @@ import UIKit
 
 class SearchViewController: UIViewController {
 
+    
+    @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var exitButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        addBorderToButton()
 
         // Do any additional setup after loading the view.
     }
@@ -26,6 +31,26 @@ class SearchViewController: UIViewController {
         self .dismissViewControllerAnimated(true, completion:nil)
     }
 
+    func addBorderToButton()
+    {
+        exitButton.layer.cornerRadius = 1
+        exitButton.layer.borderWidth = 1
+        exitButton.layer.borderColor = UIColor.blackColor().CGColor;
+        
+        startButton.layer.cornerRadius = 1
+        startButton.layer.borderWidth = 1
+        startButton.layer.borderColor = UIColor.blackColor().CGColor;
+        
+        /*  bookmarkButton.layer.cornerRadius = 5
+         bookmarkButton.layer.borderWidth = 1
+         bookmarkButton.layer.borderColor = UIColor.blackColor().CGColor;
+         
+         searchLocationButton.layer.cornerRadius = 5
+         searchLocationButton.layer.borderWidth = 1
+         searchLocationButton.layer.borderColor = UIColor.blackColor().CGColor;
+         */
+    }
+    
     /*
     // MARK: - Navigation
 
