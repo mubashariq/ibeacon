@@ -14,19 +14,56 @@ class FloorViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet weak var findTextField: UITextField!
     @IBOutlet weak var findButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
+    
+    @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var exitButton: UIButton!
+    
     var items: [String] = []
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        addBorderToButton()
+        
+        var frameRect = findTextField.frame
+        frameRect.size.height = 60 // <-- Specify the height you want here.
+        findTextField.frame = frameRect;
+        
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(FloorViewController.methodOfReceivedNotification(_:)), name:"NotificationIdentifier", object: nil)
-        tableView.hidden = true;
-        bookMarkButton.hidden=true;
+        tableView.hidden = true
+        bookMarkButton.hidden=true
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         // Do any additional setup after loading the view.
     }
     
+    func addBorderToButton()
+    {
+        exitButton.layer.cornerRadius = 1
+        exitButton.layer.borderWidth = 1
+        exitButton.layer.borderColor = UIColor.blackColor().CGColor;
+        
+        startButton.layer.cornerRadius = 1
+        startButton.layer.borderWidth = 1
+        startButton.layer.borderColor = UIColor.blackColor().CGColor;
+        
+        /*  bookmarkButton.layer.cornerRadius = 5
+         bookmarkButton.layer.borderWidth = 1
+         bookmarkButton.layer.borderColor = UIColor.blackColor().CGColor;
+         
+         searchLocationButton.layer.cornerRadius = 5
+         searchLocationButton.layer.borderWidth = 1
+         searchLocationButton.layer.borderColor = UIColor.blackColor().CGColor;
+         */
+    }
+    
     @IBAction func findButtonAction(sender: AnyObject) {
+        
+        
+        findTextField .resignFirstResponder()
+        
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        appDelegate.playAudio("beep-06")
+        
         let x = (findTextField.text! as NSString).substringWithRange(NSMakeRange(0, 1))
         populateFloorData(x as String)
         tableView.hidden = false
@@ -41,6 +78,10 @@ class FloorViewController: UIViewController, UITableViewDelegate, UITableViewDat
         if(number=="1")
         {
             items = ["First Floor", "Nearest Room is 101", "You are standing near entrance", "Your nearest location in helping desk","Elevator is 100 meter away straight","On your left is head office","Library on third floor"]
+            
+            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            appDelegate.playAudio("beep-06")
+            
         }
         else if (number=="2")
         {
@@ -71,7 +112,7 @@ class FloorViewController: UIViewController, UITableViewDelegate, UITableViewDat
         cell.backgroundColor = tableView.backgroundColor
         cell.textLabel?.textColor = UIColor.whiteColor()
         cell.textLabel?.text = self.items[indexPath.row]
-        
+        cell.textLabel?.font = cell.textLabel?.font.fontWithSize(18)
         return cell
     }
     
