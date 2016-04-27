@@ -10,12 +10,14 @@ import UIKit
 
 class BookMarkDetailsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    
+    @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var exitButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     var items: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        addBorderToButton()
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         populateFloorData()
         // Do any additional setup after loading the view.
@@ -26,6 +28,26 @@ class BookMarkDetailsViewController: UIViewController, UITableViewDelegate, UITa
     {
         items = ["First Floor", "Nearest Room is 101", "You are standing near entrance", "Your nearest location in helping desk","Elevator is 100 meter away straight","On your left is head office","Library on third floor"]
         tableView.reloadData()
+    }
+    
+    func addBorderToButton()
+    {
+        exitButton.layer.cornerRadius = 1
+        exitButton.layer.borderWidth = 1
+        exitButton.layer.borderColor = UIColor.blackColor().CGColor;
+        
+        startButton.layer.cornerRadius = 1
+        startButton.layer.borderWidth = 1
+        startButton.layer.borderColor = UIColor.blackColor().CGColor;
+        
+        /*  bookmarkButton.layer.cornerRadius = 5
+         bookmarkButton.layer.borderWidth = 1
+         bookmarkButton.layer.borderColor = UIColor.blackColor().CGColor;
+         
+         searchLocationButton.layer.cornerRadius = 5
+         searchLocationButton.layer.borderWidth = 1
+         searchLocationButton.layer.borderColor = UIColor.blackColor().CGColor;
+         */
     }
     
     override func didReceiveMemoryWarning() {
@@ -48,7 +70,7 @@ class BookMarkDetailsViewController: UIViewController, UITableViewDelegate, UITa
         cell.backgroundColor = tableView.backgroundColor
         cell.textLabel?.textColor = UIColor.whiteColor()
         cell.textLabel?.text = self.items[indexPath.row]
-        
+        cell.textLabel?.font = cell.textLabel?.font.fontWithSize(18)
         return cell
     }
     
