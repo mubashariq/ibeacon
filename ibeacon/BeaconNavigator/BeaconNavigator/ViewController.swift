@@ -36,7 +36,7 @@ class ViewController: UIViewController {
     @IBAction func startButtonAction(sender: AnyObject) {
         
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        appDelegate.playAudio("beep-06")
+        appDelegate.playAudio("start")
     }
 
 }

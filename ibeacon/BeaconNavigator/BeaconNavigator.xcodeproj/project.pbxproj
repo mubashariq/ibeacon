@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		54273AEC1CD7BBFE00A9A4EF /* back.wav in Resources */ = {isa = PBXBuildFile; fileRef = 54273AE01CD7BBFE00A9A4EF /* back.wav */; };
+		54273AED1CD7BBFE00A9A4EF /* bookmark.wav in Resources */ = {isa = PBXBuildFile; fileRef = 54273AE11CD7BBFE00A9A4EF /* bookmark.wav */; };
+		54273AEE1CD7BBFE00A9A4EF /* current.wav in Resources */ = {isa = PBXBuildFile; fileRef = 54273AE21CD7BBFE00A9A4EF /* current.wav */; };
+		54273AEF1CD7BBFE00A9A4EF /* msg1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 54273AE31CD7BBFE00A9A4EF /* msg1.wav */; };
+		54273AF01CD7BBFE00A9A4EF /* msg2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 54273AE41CD7BBFE00A9A4EF /* msg2.wav */; };
+		54273AF11CD7BBFE00A9A4EF /* msg3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 54273AE51CD7BBFE00A9A4EF /* msg3.wav */; };
+		54273AF21CD7BBFE00A9A4EF /* msg4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 54273AE61CD7BBFE00A9A4EF /* msg4.wav */; };
+		54273AF31CD7BBFE00A9A4EF /* msg5.wav in Resources */ = {isa = PBXBuildFile; fileRef = 54273AE71CD7BBFE00A9A4EF /* msg5.wav */; };
+		54273AF41CD7BBFE00A9A4EF /* msg6.wav in Resources */ = {isa = PBXBuildFile; fileRef = 54273AE81CD7BBFE00A9A4EF /* msg6.wav */; };
+		54273AF51CD7BBFE00A9A4EF /* msg7.wav in Resources */ = {isa = PBXBuildFile; fileRef = 54273AE91CD7BBFE00A9A4EF /* msg7.wav */; };
+		54273AF61CD7BBFE00A9A4EF /* search.wav in Resources */ = {isa = PBXBuildFile; fileRef = 54273AEA1CD7BBFE00A9A4EF /* search.wav */; };
+		54273AF71CD7BBFE00A9A4EF /* start.wav in Resources */ = {isa = PBXBuildFile; fileRef = 54273AEB1CD7BBFE00A9A4EF /* start.wav */; };
 		5F0518C51CC5762E00B078CD /* BookMarkDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0518C41CC5762E00B078CD /* BookMarkDetailsViewController.swift */; };
 		5F658C8F1C94A2A2009B5476 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F658C8E1C94A2A2009B5476 /* AppDelegate.swift */; };
 		5F658C911C94A2A2009B5476 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F658C901C94A2A2009B5476 /* ViewController.swift */; };
@@ -57,6 +69,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		54273AE01CD7BBFE00A9A4EF /* back.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = back.wav; sourceTree = "<group>"; };
+		54273AE11CD7BBFE00A9A4EF /* bookmark.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bookmark.wav; sourceTree = "<group>"; };
+		54273AE21CD7BBFE00A9A4EF /* current.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = current.wav; sourceTree = "<group>"; };
+		54273AE31CD7BBFE00A9A4EF /* msg1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = msg1.wav; sourceTree = "<group>"; };
+		54273AE41CD7BBFE00A9A4EF /* msg2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = msg2.wav; sourceTree = "<group>"; };
+		54273AE51CD7BBFE00A9A4EF /* msg3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = msg3.wav; sourceTree = "<group>"; };
+		54273AE61CD7BBFE00A9A4EF /* msg4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = msg4.wav; sourceTree = "<group>"; };
+		54273AE71CD7BBFE00A9A4EF /* msg5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = msg5.wav; sourceTree = "<group>"; };
+		54273AE81CD7BBFE00A9A4EF /* msg6.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = msg6.wav; sourceTree = "<group>"; };
+		54273AE91CD7BBFE00A9A4EF /* msg7.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = msg7.wav; sourceTree = "<group>"; };
+		54273AEA1CD7BBFE00A9A4EF /* search.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = search.wav; sourceTree = "<group>"; };
+		54273AEB1CD7BBFE00A9A4EF /* start.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = start.wav; sourceTree = "<group>"; };
 		5F0518C41CC5762E00B078CD /* BookMarkDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookMarkDetailsViewController.swift; sourceTree = "<group>"; };
 		5F658C8B1C94A2A2009B5476 /* BeaconNavigator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeaconNavigator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F658C8E1C94A2A2009B5476 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -170,6 +194,18 @@
 		5F9F5C571CCFE3FC00E7AC7F /* sounds */ = {
 			isa = PBXGroup;
 			children = (
+				54273AE01CD7BBFE00A9A4EF /* back.wav */,
+				54273AE11CD7BBFE00A9A4EF /* bookmark.wav */,
+				54273AE21CD7BBFE00A9A4EF /* current.wav */,
+				54273AE31CD7BBFE00A9A4EF /* msg1.wav */,
+				54273AE41CD7BBFE00A9A4EF /* msg2.wav */,
+				54273AE51CD7BBFE00A9A4EF /* msg3.wav */,
+				54273AE61CD7BBFE00A9A4EF /* msg4.wav */,
+				54273AE71CD7BBFE00A9A4EF /* msg5.wav */,
+				54273AE81CD7BBFE00A9A4EF /* msg6.wav */,
+				54273AE91CD7BBFE00A9A4EF /* msg7.wav */,
+				54273AEA1CD7BBFE00A9A4EF /* search.wav */,
+				54273AEB1CD7BBFE00A9A4EF /* start.wav */,
 				5F658CCC1C94B464009B5476 /* beep-06.wav */,
 			);
 			name = sounds;
@@ -291,9 +327,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54273AF31CD7BBFE00A9A4EF /* msg5.wav in Resources */,
+				54273AF11CD7BBFE00A9A4EF /* msg3.wav in Resources */,
+				54273AEC1CD7BBFE00A9A4EF /* back.wav in Resources */,
+				54273AF71CD7BBFE00A9A4EF /* start.wav in Resources */,
 				5F658C991C94A2A2009B5476 /* LaunchScreen.storyboard in Resources */,
+				54273AEE1CD7BBFE00A9A4EF /* current.wav in Resources */,
+				54273AF61CD7BBFE00A9A4EF /* search.wav in Resources */,
+				54273AF21CD7BBFE00A9A4EF /* msg4.wav in Resources */,
 				5F658C961C94A2A2009B5476 /* Assets.xcassets in Resources */,
+				54273AF41CD7BBFE00A9A4EF /* msg6.wav in Resources */,
+				54273AEF1CD7BBFE00A9A4EF /* msg1.wav in Resources */,
 				5F658CCD1C94B464009B5476 /* beep-06.wav in Resources */,
+				54273AF51CD7BBFE00A9A4EF /* msg7.wav in Resources */,
+				54273AF01CD7BBFE00A9A4EF /* msg2.wav in Resources */,
+				54273AED1CD7BBFE00A9A4EF /* bookmark.wav in Resources */,
 				5F658C941C94A2A2009B5476 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

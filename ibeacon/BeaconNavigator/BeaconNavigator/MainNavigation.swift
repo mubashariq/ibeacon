@@ -37,9 +37,13 @@ class MainNavigation: UIViewController, UITableViewDelegate, UITableViewDataSour
         {
              items = ["Third Floor", "Nearest Room is 301", "You are standing near to stairs", "Your nearest location is silva building","Elevator is 300 meter away straight","On your left is meeting room","Library is 10 meter away left"]
         }
-        else
+        else if(appDelegate.CurrentBeacon=="4")
         {
             items = ["Fourth Floor", "Nearest Room is 401", "You are standing near head office of informatic department", "Your nearest location is room 402","Elevator is 400 meter away straight","On your left is cafe area","Library is on third floor"]
+        }
+        else
+        {
+            items = ["First Floor", "Nearest Room is 101", "You are standing near entrance", "Your nearest location is helping desk","Elevator is 100 meter away straight","On your left is cafe area","Library is on third floor"]
         }
     }
 
@@ -91,30 +95,33 @@ class MainNavigation: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        
-        if(indexPath.row==1)
+        if(indexPath.row==0)
         {
-            appDelegate.playAudio("beep-06")
+            appDelegate.playAudio("msg1")
+        }
+        else if(indexPath.row==1)
+        {
+            appDelegate.playAudio("msg2")
         }
         else if(indexPath.row==2)
         {
-            appDelegate.playAudio("beep-06")
+            appDelegate.playAudio("msg3")
         }
         else if(indexPath.row==3)
         {
-            appDelegate.playAudio("beep-06")
+            appDelegate.playAudio("msg4")
         }
         else if(indexPath.row==4)
         {
-            appDelegate.playAudio("beep-06")
+            appDelegate.playAudio("msg5")
         }
         else if(indexPath.row==5)
         {
-            appDelegate.playAudio("beep-06")
+            appDelegate.playAudio("msg6")
         }
         else if(indexPath.row==6)
         {
-            appDelegate.playAudio("beep-06")
+            appDelegate.playAudio("msg7")
         }
         else if(indexPath.row==7)
         {
