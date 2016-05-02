@@ -18,7 +18,7 @@ struct ItemsViewControllerConstant {
     
     
     static let thirdFloorBeaconName = "Third Floor"
-    static let thirdfloorUDID = "92AB49BE-4127-42F4-B532-90FA1E26491"
+    static let thirdfloorUDID = "EF54FD47-9C15-4805-8091-3D1C54C16D3A"
     static let thirdfloorMajorValue = "3"
     static let thirdfloorMinorValue = "301"
 }

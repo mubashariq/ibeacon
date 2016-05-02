@@ -26,7 +26,8 @@ class BookMarkDetailsViewController: UIViewController, UITableViewDelegate, UITa
     
     func populateFloorData()
     {
-        č
+        items = ["A 401", "S 101", "Library", "Cafe", "A 434"]
+    
         tableView.reloadData()
     }
     

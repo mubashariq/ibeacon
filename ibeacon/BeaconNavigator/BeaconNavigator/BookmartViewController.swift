@@ -55,6 +55,7 @@ class BookmartViewController: UIViewController, UITableViewDelegate, UITableView
  
     func populateFloorData()
     {
+        items = ["A 401", "S 101", "Library", "Cafe", "A 434"]
         
         tableView.reloadData()
     }
